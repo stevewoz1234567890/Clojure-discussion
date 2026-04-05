@@ -54,17 +54,9 @@ Clojure, ClojureScript, **Ring / Reitit / Pedestal**, **Datomic & SQL** (e.g. Po
 2. **Discovery call** — We align on risks, timeline, and the smallest valuable next step.  
 3. **Proposal** — You receive a short written scope, milestones, and how we will communicate progress.
 
-**Contact:** *[Add your email, calendar link, or company site here]*
-
-**Location & timezone:** *[Optional — helps global teams plan collaboration]*
-
 ---
 
-## This repository
-
-This space hosts **curated technical notes and discussion summaries** for the Clojure community and prospective clients—starting with tooling threads (agents, LSP, nREPL, MCP). For commercial engagements and references, use the contact above.
-
-### Community notes
+## Community notes
 
 - **[Pi, Psi, and Clojure tooling](discussions/pi-agent-clojure-tooling.md)** — Synthesized thread: Pi vs MCP, `clojure-lsp`, nREPL skills, [oh-my-pi](https://github.com/can1357/oh-my-pi), [pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter), FastMCP CLI, and related links.
 
