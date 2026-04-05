@@ -24,7 +24,7 @@ Clojure is a strong fit when reliability, data-heavy workflows, and integration 
 - **Product engineering** — Features, APIs, and services built with tests, clear boundaries, and operational clarity.
 - **Architecture & review** — Design for concurrency, failure modes, and growth; code and system reviews that improve outcomes without bike-shedding.
 - **Legacy & integration** — Interop with Java, Kafka, databases, and message pipelines; incremental refactors instead of risky big-bang rewrites.
-- **Tooling & developer experience** — Build pipelines, REPL-driven workflows, and documentation so your team owns the system confidently.
+- **Tooling & developer experience** — Build pipelines, REPL-driven workflows, **AI-assisted editing** (including agents such as [Pi](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent) / [Psi](https://github.com/hugoduncan/psi) with Clojure-aware skills), and documentation so your team owns the system confidently.
 
 We work the way serious Clojure teams work: **REPL-first**, **data-oriented design**, and **small, composable modules**—so changes stay understandable years from now.
 
@@ -62,7 +62,11 @@ Clojure, ClojureScript, **Ring / Reitit / Pedestal**, **Datomic & SQL** (e.g. Po
 
 ## This repository
 
-This space hosts **[describe your repo purpose: e.g. technical notes, open experiments, discussion artifacts, or project showcases]**. For commercial engagements and references, use the contact above.
+This space hosts **curated technical notes and discussion summaries** for the Clojure community and prospective clients—starting with tooling threads (agents, LSP, nREPL, MCP). For commercial engagements and references, use the contact above.
+
+### Community notes
+
+- **[Pi, Psi, and Clojure tooling](discussions/pi-agent-clojure-tooling.md)** — Synthesized thread: Pi vs MCP, `clojure-lsp`, nREPL skills, [oh-my-pi](https://github.com/can1357/oh-my-pi), [pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter), FastMCP CLI, and related links.
 
 ---
 
