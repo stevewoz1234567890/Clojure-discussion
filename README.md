@@ -42,7 +42,7 @@ Tell us your constraints—timeline, compliance, stack, and team size—and we w
 
 ## Tech we commonly work with
 
-Clojure, ClojureScript, **Ring / Reitit / Pedestal**, **Datomic & SQL** (e.g. PostgreSQL), **Kafka & messaging**, **Docker & cloud-native** deployments, and **observability** (metrics, tracing, structured logging) aligned with how JVM services run in production.
+Clojure, ClojureScript, **Ring / Reitit / Pedestal**, **Datomic & SQL** (e.g. PostgreSQL), **Kafka & messaging**, **Docker & cloud-native** deployments, **observability** (metrics, tracing, structured logging), and **data / stats interop** (e.g. [ClojisR](https://scicloj.github.io/clojisr/) for R) where projects span the JVM and statistical stacks.
 
 *Stack-specific needs?* We adapt to your existing choices rather than forcing a rewrite.
 
@@ -59,6 +59,7 @@ Clojure, ClojureScript, **Ring / Reitit / Pedestal**, **Datomic & SQL** (e.g. Po
 ## Community notes
 
 - **[Pi, Psi, and Clojure tooling](discussions/pi-agent-clojure-tooling.md)** — Synthesized thread: Pi vs MCP, `clojure-lsp`, nREPL skills, [oh-my-pi](https://github.com/can1357/oh-my-pi), [pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter), FastMCP CLI, and related links.
+- **[clojisr 1.1.0 — docstrings on `require-r`](discussions/clojisr-1.1.0-docstrings.md)** — Clojure ↔ R interop; optional R help text as var metadata. Includes a runnable **[example](examples/clojisr-docstrings/)** (`scicloj/clojisr` **1.1.0**). Thanks to [@Carsten Behring](https://github.com/behrica).
 
 ---
 
