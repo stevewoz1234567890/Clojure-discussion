@@ -27,6 +27,26 @@ The thread argued that **agent** tools which mostly **grep** files are a weak de
 
 **Mutating** the graph and **serializing** back to source is **possible in principle** but needs more machinery (whitespace, formatting). A related direction is **text edits** with **Tree-sitter feedback** for validation. For **Clojure**, **syntax / paren errors** from a **Tree-sitter** view can be easier to work with than **explosive** reader failures elsewhere; the **REPL** remains a natural **workspace** for execution-grounded workflows.
 
+## Chiasmus in the wild — Claude Code, scale, and MCP observability
+
+Thread snippets from **#ai-assisted-coding** (and cross-posted channels) on **using Chiasmus with Claude Code** and **operational** pain points.
+
+### Guided solver review via MCP
+
+A participant reported that **forcing Claude to review code with the solver** often surfaced real issues. They added a **`chiasmus_review`** command to their **MCP** setup that **walks the agent through a sequence of steps**—which **almost always** turned up **something wrong** in their experience.
+
+### Scale: Prolog, fact explosion, and native graph algorithms
+
+**[@cfleming](https://github.com/cfleming)** asked how large a codebase Chiasmus had been tried on, and whether **Tau Prolog** slowed down when **fact counts** grew (anticipating a **huge** set even for **medium** projects).
+
+**[@yogthos](https://github.com/yogthos)** confirmed that **large graphs** were a problem in practice and pointed to **[PR #17](https://github.com/yogthos/chiasmus/pull/17)** (*merged*): hot-path **reachability / cycles / impact / dead-code / callers / callees** analyses that previously went through **Prolog** were replaced with **native TypeScript** **O(V+E)** implementations (**Tarjan SCC**, **BFS**, indexed lookups). **Prolog** rules are still **emitted** for **`chiasmus_verify`** custom queries; **`facts`** responses gained a **size cap** (structured error above the limit) and **graph** handling trims **pretty-print** overhead to shrink payloads. Maintainer-reported **synthetic scale tests** (hundreds to ~1000 nodes) dropped from **multi-second timeouts** to on the order of **~30ms** for the combined analyses.
+
+### Pretty-printing tool traffic (feature discussion)
+
+**Wanishing** asked for a **pretty-printed** view of **tool calls and responses** so they could **audit** how **Claude Code** uses Chiasmus—raw logs were **hard to parse**, and they wanted to **validate** that the client was using the MCP **reasonably**.
+
+**yogthos** called it a **good idea** and figured it should be **straightforward**; at the time he **mostly trusted** Claude Code when he saw tool activity and **occasionally** asked the model **what worked and what didn’t**. He also invited **more field reports**—Chiasmus as a **large experiment** benefits from **real-world** scenarios.
+
 ## Sporulator — workflow UI and constrained LLM loops
 
 **[mycelium-clj/sporulator](https://github.com/mycelium-clj/sporulator)** is a separate experiment in a **more restricted** setting: a **declarative graph** of **execution flow**, with the **LLM** implementing **each step** as an **isolated** component (resources + state in → new state out), a **workflow engine** dispatching to the next node, and **mechanical verification** so the model stays in a **tight loop** (generate → execute → structured feedback). There are **two parts**: a **UI** (built with **[React Flow](https://reactflow.dev/)**) and a **server-side API** that does the heavy lifting. Maintainer-posted **screenshots** of the UI appeared in community channels (e.g. **#ai-assisted-coding**).
@@ -34,11 +54,11 @@ The thread argued that **agent** tools which mostly **grep** files are a weak de
 ## Links
 
 - [npm — `@yogthos/tree-sitter-clojure`](https://www.npmjs.com/package/@yogthos/tree-sitter-clojure)  
-- [npm — `chiasmus`](https://www.npmjs.com/package/chiasmus) · [GitHub — yogthos/chiasmus](https://github.com/yogthos/chiasmus)  
+- [npm — `chiasmus`](https://www.npmjs.com/package/chiasmus) · [GitHub — yogthos/chiasmus](https://github.com/yogthos/chiasmus) · [PR #17 — native O(V+E) graph analyses (scale)](https://github.com/yogthos/chiasmus/pull/17)  
 - [GitHub — mycelium-clj/sporulator](https://github.com/mycelium-clj/sporulator)  
 - [arXiv — Neurosymbolic AI (2305.00813)](https://arxiv.org/abs/2305.00813)  
 - [Upstream — tree-sitter/tree-sitter-clojure](https://github.com/tree-sitter/tree-sitter-clojure)
 
 ## Credits
 
-Thread summarized from a **Clojure** community discussion (**yogthos**, **Tommy**, **JAtkins**). Thanks to **[Dmitri Sotnikov](https://github.com/yogthos)** ([@yogthos](https://github.com/yogthos)) for **@yogthos/tree-sitter-clojure**, **chiasmus**, and explanations; to **Tommy** and **JAtkins** for questions that shaped the thread.
+Thread summarized from **Clojure** / **ai-assisted-coding** discussions (**yogthos**, **Tommy**, **JAtkins**, **cfleming**, **Wanishing**, and others). Thanks to **[Dmitri Sotnikov](https://github.com/yogthos)** ([@yogthos](https://github.com/yogthos)) for **@yogthos/tree-sitter-clojure**, **chiasmus**, and explanations; to **Tommy**, **JAtkins**, **Colin Fleming**, **Wanishing**, and thread participants for questions and battle reports.
