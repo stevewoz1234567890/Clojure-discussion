@@ -73,6 +73,13 @@ Then open upstream notebooks (getting started, autodiff, ODE solvers, linear alg
 org.replikativ/raster {:mvn/version "0.1.1"}
 ```
 
+## Community thread
+
+Clojurians Slack (**`#simmis`**), snapshot from the announcement thread:
+
+- **[teodorlu](https://github.com/teodorlu)** — congratulated the release (“Impressive! Congratulations on the release”).
+- **[whilo](https://github.com/whilo)** — thanked teodorlu for the kind words.
+
 ## Credits
 
-Announcement: **[replikativ/raster](https://github.com/replikativ/raster)** maintainers and community. Feedback and issues welcome on GitHub.
+Announcement: **[replikativ/raster](https://github.com/replikativ/raster)** maintainers and community. **Thread participants:** **[teodorlu](https://github.com/teodorlu)**, **[whilo](https://github.com/whilo)**. Feedback and issues welcome on GitHub.
