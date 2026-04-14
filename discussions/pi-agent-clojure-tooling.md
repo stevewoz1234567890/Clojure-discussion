@@ -25,7 +25,7 @@ This note summarizes a community thread about using **[Pi](https://github.com/ba
 | **[Psi](https://github.com/hugoduncan/psi)** | Emacs-oriented harness sharing conceptual DNA with Pi; discussed as **more polished around Emacs**. |
 | **[oh-my-pi](https://github.com/can1357/oh-my-pi)** | Fork-style harness; one contributor reported **good results on a Clojure monorepo** with **custom extensions** (e.g. paren helpers, repo-specific tooling). Described as **not** trying to stay in lockstep with upstream Pi. |
 | **[pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter)** | Mentioned as a bridge for those who **do** want MCP-style capabilities alongside Pi. |
-| **[pandō](https://clojure.getpando.ai)** | Commercial **MCP** server focused on **structural** (AST) **Clojure** edits and refactors for agents; see **[community note](pando-structural-clojure-mcp.md)**. |
+| **[pandō](https://clojure.getpando.ai)** | **MCP** server focused on **structural** (AST) **Clojure** edits and refactors for agents (**free** for personal use; **not** OSS **yet**); see **[community note](pando-structural-clojure-mcp.md)**. |
 
 ---
 

@@ -6,7 +6,7 @@
 
 - **Namespace-aware** operations such as **rename**, **refactor**, and **transform**, described as **structural rather than string-based**.
 - **Homoiconicity** called out as core inspiration (“Clojure made code data; pandō makes the codebase data”).
-- **Licensing:** **free for personal use**; **not** open source.
+- **Licensing / availability:** **free for personal use**; **not** open source **at present**. In a follow-up to “so, not open source?”, **George (clojure.getpando.ai)** replied **“Not yet at least :-)”**—treat that as informal roadmap signal, not a commitment; the **site** remains authoritative.
 
 This file is a **community pointer**, not product documentation—see **[clojure.getpando.ai](https://clojure.getpando.ai)** for setup, capabilities, and support channels.
 
