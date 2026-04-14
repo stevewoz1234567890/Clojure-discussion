@@ -25,6 +25,7 @@ This note summarizes a community thread about using **[Pi](https://github.com/ba
 | **[Psi](https://github.com/hugoduncan/psi)** | Emacs-oriented harness sharing conceptual DNA with Pi; discussed as **more polished around Emacs**. |
 | **[oh-my-pi](https://github.com/can1357/oh-my-pi)** | Fork-style harness; one contributor reported **good results on a Clojure monorepo** with **custom extensions** (e.g. paren helpers, repo-specific tooling). Described as **not** trying to stay in lockstep with upstream Pi. |
 | **[pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter)** | Mentioned as a bridge for those who **do** want MCP-style capabilities alongside Pi. |
+| **[pandō](https://clojure.getpando.ai)** | Commercial **MCP** server focused on **structural** (AST) **Clojure** edits and refactors for agents; see **[community note](pando-structural-clojure-mcp.md)**. |
 
 ---
 
@@ -115,6 +116,7 @@ The original poster suggested: **Pi is extended via JavaScript**, so **Squint** 
 - [mcporter](https://github.com/steipete/mcporter)
 - [What if you don’t need MCP at all?](https://mariozechner.at/posts/2025-11-02-what-if-you-dont-need-mcp/) (Mario Zechner)
 - [clojure-mcp](https://github.com/bhauman/clojure-mcp) · [clojure-mcp-light](https://github.com/bhauman/clojure-mcp-light)
+- [pandō — structural Clojure MCP](https://clojure.getpando.ai) · [note in this repo](pando-structural-clojure-mcp.md)
 - [sift-gateway](https://github.com/lourencomaciel/sift-gateway) (context/filtering experiment; mentioned as promising)
 - [Squint](https://github.com/squint-cljs/squint) (Clojure/script → JS)
 
