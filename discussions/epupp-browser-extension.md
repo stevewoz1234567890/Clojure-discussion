@@ -25,9 +25,24 @@ A **[starter template](https://github.com/PEZ/my-epupp-hq)** exists for humans a
 
 Discussion and feedback: **`#epupp`** on the Clojureverse Slack (and issues on the repo).
 
-## Community note
+## Community note — **sharing between userscripts**
 
 **Peter Strömberg** ([@PEZ](https://github.com/PEZ) / **pez**) noted that dependency sharing should address **sharing code between userscripts** — with a ping to **@neumann** to report how it goes in practice.
+
+## Userscripts vs **SPA navigation** (needs **refresh**) — Brave / GitHub Actions
+
+[**sheluchin**](https://github.com/sheluchin) (Slack **`#epupp`**): a **userscript** that enhances **GitHub Actions** workflow pages (surfacing exact **workflow run timestamps** instead of hovering **“X minutes ago”**) often **does not run visibly** after **in-app navigation** (clicking links inside GitHub’s **SPA** shell), yet **shows up after F5**.
+
+**Peter Strömberg** ([@PEZ](https://github.com/PEZ)) guessed **lazy-loaded** fragments plus **warm-cache** semantics on reload—your inject may fire **before** the subtree you scrape exists.
+
+### Practical mitigation
+
+1. **Describe repro as steps** (“open X, click Y, observe missing UI until refresh”) even without a repo—helps distinguish **routing** vs extension bugs (**PEZ**, in-thread).
+2. **Poll** (or **`MutationObserver`**) until the DOM node(s) your script anchors on exist, then detach—pattern lives in Epupp’s **bundled web-installer helpers** (**PEZ**: “prior art … not easy to spot” amidst a large installer script).
+
+### Environment
+
+Report used **Brave** (Chromium). Same class of pitfalls applies to Chrome-likes whenever **turbo-/client-side** transitions skip a full **`load`** cycle your `@run-at` keyed on mentally.
 
 ## Links
 

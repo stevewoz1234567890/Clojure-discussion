@@ -33,6 +33,7 @@ Someone migrating tests asked whether **`describe`** was optional and how **`exp
 
 - [GitHub — NoahTheDuke/lazytest](https://github.com/NoahTheDuke/lazytest)  
 - [`docs/core.md`](https://github.com/NoahTheDuke/lazytest/blob/main/docs/core.md) — **`describe`**, **`it`**, **`expect-it`**, **`defdescribe`**
+- **[lazytest-cljc-macros-current-ns-shadow-cljs.md](lazytest-cljc-macros-current-ns-shadow-cljs.md)** — **`.cljc` macros**, **shadow-cljs**, **`current-ns`** / **`*ns*`** (separate Slack thread).
 
 ---
 
